@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+
+<div class="container section">
+    <h2 style="text-align:center;">All Projects</h2>
+
+    <div class="projects">
+        {% for p in projects %}
+        <div class="card">
+            <h3>{{ p.title }}</h3>
+            <p>{{ p.description }}</p>
+            <p><b>Tech:</b> {{ p.tech_stack }}</p>
+            <a href="{{ p.github_link }}" target="_blank">GitHub</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

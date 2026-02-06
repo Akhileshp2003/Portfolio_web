@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Skills{% endblock %}
+
+{% block content %}
+
+<div class="container section">
+    <h2 style="text-align:center;">Skills</h2>
+
+    <div class="skills">
+        {% for s in skills %}
+        <div>
+            <p>{{ s.name }}</p>
+            <div class="skill-bar">
+                <div style="width: {{ s.level }}%"></div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

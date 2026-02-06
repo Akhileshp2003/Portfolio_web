@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Internships{% endblock %}
+
+{% block content %}
+
+<div class="container section">
+    <h2 style="text-align:center;">Internship Experience</h2>
+
+    <div class="projects">
+        {% for i in internships %}
+        <div class="card">
+            <h3>{{ i.role }}</h3>
+            <p><b>Company:</b> {{ i.company }}</p>
+            <p><b>Duration:</b> {{ i.duration }}</p>
+            <p><b>Tech:</b> {{ i.technologies }}</p>
+            <p>{{ i.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
